@@ -19,3 +19,7 @@
 @import "profile";
 @import "footer";
 @import "links";
+
+html {
+  scroll-behavior: smooth;
+}
