@@ -90,6 +90,7 @@
       width: 100%;
     }
     .link-guidelines {
+      font-size: 1em;
       margin-top: 55%;
     }
     p:nth-of-type(2) {
@@ -101,7 +102,7 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 425px) {
   #guidelines {
     background-position: 50% 90%;
     background-size: 35%;

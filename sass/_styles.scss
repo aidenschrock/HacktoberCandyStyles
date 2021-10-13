@@ -108,6 +108,19 @@
     content: "Grid FTW!";
   }
 }
+
+@media (prefers-reduced-motion) {
+  #styles .features,
+  .features.patterned {
+    li {
+      transition: unset;
+
+      &:hover {
+        transform: unset;
+      }
+    }
+  }
+}
 @media only screen and (max-width: 768px) {
   #styles {
     display: flex;
