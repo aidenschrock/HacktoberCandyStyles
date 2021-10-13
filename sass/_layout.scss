@@ -55,3 +55,9 @@ article,
   grid-gap: 1em;
   list-style: none;
 }
+
+@media only screen and (max-width: 425px) {
+  body {
+    width: 90%;
+  }
+}

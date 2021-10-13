@@ -3,7 +3,7 @@
   background-repeat: no-repeat;
   background-position: 85% 28%;
   p {
-    color: white;
+    color: var(--color-primary);
     font-family: "Stylish", sans-serif;
     width: 50%;
 
@@ -16,7 +16,7 @@
   }
 
   ol {
-    color: white;
+    color: var(--color-primary);
     font-family: "Stylish", sans-serif;
     width: 50%;
     a {
@@ -69,5 +69,28 @@
 @media (max-width: 35rem) {
   #about section:nth-child(2)::before {
     transform: scale(2) translate(-25%, -25%);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #contribute {
+    background-position: 50% 30%;
+    background-size: 70%;
+    h2 {
+      font-size: 2em;
+      text-align: center;
+    }
+    p {
+      width: 100%;
+    }
+    ol {
+      width: 100%;
+    }
+    li {
+      font-size: 1em;
+    }
+    section:nth-child(2) {
+      margin-top: 50%;
+    }
   }
 }

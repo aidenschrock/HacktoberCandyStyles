@@ -17,13 +17,13 @@
     grid-gap: 1rem;
 
     > a {
-      color: white;
+      color: var(--color-primary);
       min-height: 2em;
-      background: rgb(250, 66, 176);
+      background: var(--color-primary-alt);
       background: linear-gradient(
         90deg,
-        rgba(250, 66, 176, 1) 0%,
-        rgba(254, 73, 52, 1) 100%
+        var(--color-primary-alt) 0%,
+        var(--color-secondary) 100%
       );
       border-radius: 40px;
       filter: drop-shadow(0 0 0.75rem rgba(255, 255, 255, 0.3));
@@ -116,7 +116,6 @@
     li {
       font-size: 1.5em;
     }
-
     width: 100%;
   }
 }
@@ -126,5 +125,10 @@
     padding: unset;
     margin: unset;
     width: 100%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .profile {
+    font-size: 0.8em;
   }
 }

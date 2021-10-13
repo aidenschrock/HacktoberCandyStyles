@@ -6,7 +6,7 @@
     margin-left: auto;
     width: 50%;
     justify-content: right;
-    color: white;
+    color: var(--color-primary);
     font-family: "Stylish", sans-serif;
     a {
       color: var(--color-secondary);
@@ -25,11 +25,11 @@
     margin-bottom: 3%;
     justify-content: right;
     transform: rotate(-8deg) translateX(-5%);
-    background: rgb(250, 66, 176);
+    background: var(--color-primary-alt);
     background: linear-gradient(
       45deg,
-      rgba(250, 66, 176, 1) 0%,
-      rgba(254, 73, 52, 1) 100%
+      var(--color-primary-alt) 0%,
+      var(--color-secondary) 100%
     );
 
     @supports (background-clip: text) or (-webkit-background-clip: text) {
@@ -69,5 +69,44 @@
 
   .container > a {
     align-self: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #guidelines {
+    display: flex;
+    flex-direction: column;
+    background-position: 50% 85%;
+    background-size: 27%;
+    h2 {
+      font-size: 2em;
+      text-align: center;
+    }
+    h3 {
+      font-size: 1.5em;
+      margin-left: unset;
+    }
+    p {
+      width: 100%;
+    }
+    .link-guidelines {
+      margin-top: 55%;
+    }
+    p:nth-of-type(2) {
+      &::before {
+        top: 4%;
+        left: 4%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #guidelines {
+    background-position: 50% 90%;
+    background-size: 35%;
+    .link-guidelines {
+      margin-top: 75%;
+    }
   }
 }
