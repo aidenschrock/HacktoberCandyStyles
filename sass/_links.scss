@@ -1,22 +1,16 @@
 .skip-link {
   position: absolute;
-  top: auto;
-  left: -10000px;
-  width: 1px;
-  height: 1px;
-  background-color: var(--color-secondary);
+  top: 0px;
+  left: 0px;
+  padding: 1%;
+  width: 13em;
+  height: 3em;
+  background-color: var(--color-background);
   color: var(--color-primary);
   font-size: 1.125rem;
-  overflow: hidden;
-
-  &:focus {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: auto;
-    height: auto;
-    padding: 0.5em;
-  }
+  overflow: visible;
+  text-decoration: none;
+  text-align: center;
 }
 
 [class^="link"]:not(.link-codepen),
