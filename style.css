@@ -564,6 +564,7 @@ nav ul li {
     width: 100%;
   }
   #guidelines .link-guidelines {
+    font-size: 1em;
     margin-top: 55%;
   }
   #guidelines p:nth-of-type(2)::before {
@@ -571,7 +572,7 @@ nav ul li {
     left: 4%;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 425px) {
   #guidelines {
     background-position: 50% 90%;
     background-size: 35%;
@@ -806,6 +807,16 @@ nav ul li {
   content: "Grid FTW!";
 }
 
+@media (prefers-reduced-motion) {
+  #styles .features li,
+.features.patterned li {
+    transition: unset;
+  }
+  #styles .features li:hover,
+.features.patterned li:hover {
+    transform: unset;
+  }
+}
 @media only screen and (max-width: 768px) {
   #styles {
     display: flex;
@@ -821,7 +832,7 @@ nav ul li {
 }
 .profile h4 {
   margin: 0;
-  color: var(--color-secondary);
+  color: #9d1001;
   text-align: center;
 }
 .profile .container {
@@ -851,7 +862,7 @@ nav ul li {
   padding: 0.45em;
 }
 .profile ul li span a {
-  color: var(--color-secondary);
+  color: #9d1001;
 }
 .profile ul li span:nth-child(1) {
   width: auto;
@@ -983,32 +994,38 @@ nav ul li {
   padding: 0.5em;
 }
 
-[class^=link]:not(.link-codepen) {
+[class^=link]:not(.link-codepen),
+.profile .container > a {
   min-height: 3em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.75em;
+  font-size: 1.125rem;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
   background: var(--color-primary-alt);
   background: linear-gradient(90deg, var(--color-primary-alt) 0%, var(--color-secondary) 100%);
   border-radius: 40px;
   filter: drop-shadow(0 0 0.75rem rgba(255, 255, 255, 0.3));
   transition: all 0.2s ease-in-out;
 }
-[class^=link]:not(.link-codepen):hover {
+[class^=link]:not(.link-codepen):hover,
+.profile .container > a:hover {
   transform: scale(1.1);
 }
 
-[class^=link]:not(.link-codepen),
+@media (prefers-reduced-motion) {
+  [class^=link]:not(.link-codepen),
 .profile .container > a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 0.75em;
-  transform: translate(0, 0);
-  transition: 180ms all ease-in-out;
-  font-size: 1.125rem;
-  line-height: 1;
-  text-align: center;
-  text-decoration: none;
+    transition: unset;
+  }
+  [class^=link]:not(.link-codepen):hover,
+.profile .container > a:hover {
+    transform: unset;
+  }
 }
-
 .page-footer [class^=link] {
   width: 100%;
   min-height: 2.5em;
@@ -1074,8 +1091,7 @@ nav ul li {
     margin-top: 15%;
   }
 
-  [class^=link]:not(.link-codepen),
-.profile .container > a {
+  [class^=link]:not(.link-codepen) {
     font-size: 0.8em;
   }
 }
